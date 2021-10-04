@@ -15,6 +15,7 @@ if uploaded_file is not None:
     image = Image.open(uploaded_file).convert('RGB')
     st.image(image, caption='Uploaded CT Scan.', use_column_width=True)
     st.write("")
+    st.write("")
     st.write("Classifying...")
 
     # Run Prediction
@@ -24,3 +25,5 @@ if uploaded_file is not None:
     pred_image = Image.open('predicted_mask.png')
     st.image(pred_image, caption='Predicted Mask', use_column_width=True)
     st.write('Predicted Tumour Centroid is: ' + pred_mask_com_str)
+    st.write("")
+    st.write("End of Prediction")
